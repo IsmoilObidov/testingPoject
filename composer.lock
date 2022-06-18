@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bd7b5629cedfcfee3dcb0f89ad223363",
+    "content-hash": "4239cabf54e572d9c8e196de92a8fa00",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5569,49 +5569,6 @@
                 "source": "https://github.com/webmozarts/assert/tree/1.11.0"
             },
             "time": "2022-06-03T18:03:27+00:00"
-        },
-        {
-            "name": "yk/laravel-whois-lookup",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/yassine-khachlek/laravel-whois-lookup.git",
-                "reference": "7c642c8e8df233fc296fbcf197303a4e7b408784"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/yassine-khachlek/laravel-whois-lookup/zipball/7c642c8e8df233fc296fbcf197303a4e7b408784",
-                "reference": "7c642c8e8df233fc296fbcf197303a4e7b408784",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6.4"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Yk\\LaravelWhoisLookup\\": "src/"
-                },
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPLv2"
-            ],
-            "authors": [
-                {
-                    "name": "Yassine Khachlek",
-                    "email": "yassine.khachlek@gmail.com"
-                }
-            ],
-            "support": {
-                "issues": "https://github.com/yassine-khachlek/laravel-whois-lookup/issues",
-                "source": "https://github.com/yassine-khachlek/laravel-whois-lookup/tree/master"
-            },
-            "time": "2017-03-23T08:59:59+00:00"
         }
     ],
     "packages-dev": [
@@ -8124,9 +8081,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "yk/laravel-whois-lookup": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
