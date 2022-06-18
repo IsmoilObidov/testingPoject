@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <form id="whois-lookup-form" action="" method="POST">
 	{{ method_field('POST') }}
 	{{ csrf_field() }}
@@ -13,9 +14,8 @@
             </span>
         @endif
 	</div>
-
 	<div class="form-group">
-		<div class="g-recaptcha" data-sitekey="{{ Illuminate\Support\Facades\Config::get('services.recaptcha.key') }}"></div>
+		<div class="g-recaptcha" data-sitekey="{{ Config::get('services.recaptcha.key') }}"></div>
 	</div>
 
 	<button type="submit" class="btn btn-default btn-block btn-lg">Search</button>
@@ -53,7 +53,6 @@ $(function() {
 			
 		});
 		request.fail(function( jqXHR, textStatus ) {
-			//alert( "Request failed: " + textStatus );
 			grecaptcha.reset();
 		});
 	});
