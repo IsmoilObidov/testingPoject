@@ -77,13 +77,13 @@ class WhoisLookupController extends Controller
 				print "<h3 style='text-align: center'>" . $domain . " 🟢 свободен<h3>";
 				exit;
 			}
-			print $info->domainName . " expires at: " . date("d.m.Y H:i:s", $info->expirationDate);
+			print '<h3 style="text-align: center">🛑Занять  <br>Срок действия '.$info->domainName . " истекает: " . date("d.m.Y H:i:s", $info->expirationDate) . '<h3>';
 		} catch (ConnectionException $e) {
-			print "Disconnect or connection timeout";
+			print "Время ожидания отключения или подключения";
 		} catch (ServerMismatchException $e) {
-			print "TLD server (.com for google.com) not found in current server hosts";
+			print "Сервер TLD (.com для google.com) не найден на текущих серверах";
 		} catch (WhoisException $e) {
-			print "Whois server responded with error '{$e->getMessage()}'";
+			print "Сервер Whois ответил с ошибкой '{$e->getMessage()}'";
 		}
 	}
 }
