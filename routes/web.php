@@ -13,10 +13,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+ 
 
 Route::get('/', [App\Http\Controllers\WhoisLookupController::class, 'create']);
 Route::post('/',[App\Http\Controllers\WhoisLookupController::class, 'store']);
