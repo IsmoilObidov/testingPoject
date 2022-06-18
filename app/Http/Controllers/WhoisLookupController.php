@@ -261,7 +261,7 @@ class WhoisLookupController extends Controller
 			'za.com' =>'whois.centralnic.com',
 		];
 
-        FacadesValidator::extend('domain', function ($value) {
+        FacadesValidator::extend('domain', function ($attribute, $value, $parameters, $validator) {
 		    preg_match("/[^\.\/]+\.[^\.\/]+$/", $value, $matches);
 		    return count($matches);
         });

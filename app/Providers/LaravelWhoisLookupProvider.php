@@ -1,4 +1,5 @@
 <?php
+use Yk\LaravelWhoisLookup\App\Http\Controllers\Controller;
 
 namespace App\Providers;
 

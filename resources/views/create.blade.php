@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
 <form id="whois-lookup-form" action="" method="POST">
 	{{ method_field('POST') }}
 	{{ csrf_field() }}
@@ -53,6 +52,7 @@ $(function() {
 			
 		});
 		request.fail(function( jqXHR, textStatus ) {
+			//alert( "Request failed: " + textStatus );
 			grecaptcha.reset();
 		});
 	});

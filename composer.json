@@ -52,7 +52,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "App\\Providers\\LaravelWhoisLookupProvider"
+                "Yk\\LaravelWhoisLookup\\App\\Providers\\LaravelWhoisLookupProvider"
             ],
             "dont-discover": []
         }
