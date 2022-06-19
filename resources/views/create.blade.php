@@ -6,35 +6,40 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	{{-- Livewire --}}
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+	<link rel="stylesheet" href="{{'css/app.css'}}">
+	<script src="{{'js/app.js'}}"></script>
+	@livewireScripts
 </head>
 <body>
-	<form id="whois-lookup-form" action="" method="POST">
-		{{ method_field('POST') }}
-		{{ csrf_field() }}
-		<div class="form-group{{ $errors->has('domain') ? ' has-error' : '' }}">
-
-			<label for="domain">Domain</label>
-			<input name="domain" type="text" class="form-control" placeholder="Domain name">
-
-			@if ($errors->has('domain'))
-				<span class="help-block">
-					<strong>{{ $errors->first('domain') }}</strong>
-				</span>
-			@endif
-			
-		</div>
 	
-		<button type="submit" class="btn btn-default btn-block btn-lg">Search</button>
-	</form>
 	
 	<br>
-	
-	<div id="response"></div>
-	
+	@livewire('domain')
 	
 	
 	
+	
+	<script>
 
+		window.addEventListener("update", (event) => {
+	
+			event.detail.product_list.forEach(function(item, i, arr) {
+	
+				df = `<tr>
+						<td>${ item[0] }</td>
+					</tr>
+					`
+	
+				$('#product_list').append(df)
+			});		
+			
+		});
+	
+		</script>
+
+		@livewireStyles
 		
 </body>
 </html>

@@ -15,9 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
  
 
-Route::get('/', [App\Http\Controllers\WhoisLookupController::class, 'create']);
-Route::post('/',[App\Http\Controllers\WhoisLookupController::class, 'store']);
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::view('/','create')->name('create');
