@@ -44,20 +44,38 @@ class Domain extends Component
 		]);
 
 
+		$response1 = [];
+
 		//printing info
 		// try {
 		if (preg_match('/\s/', $this->domain)) {
-			for ($idx = 0; $idx < strlen($this->domain); $idx += 1) {
-				if (ctype_space($this->domain[$idx])) {
-					// foreach ($validatedData['domain'] as $key) {
-						dd($validatedData['domain']);
-					}
+			$response = '';
+			$response = $this->domain;
+			$array = explode("\n", $response);
+			$i = 0;
+			foreach ($array as $key) {
+				$i = 1;
+				$info = $whois->loadDomainInfo($key);
+				if (!$info) {
+					array_push(
+						$response1,
+						[
+							'<h3 style="text-align: center">' . $key . " 🟢 свободен</h3>"
+						]
+					);
+				} else {
+					array_push(
+						$response1,
+						[
+							'<h3 style="text-align: center">🛑Занять  <br>Срок действия ' . $key . " истекает: " . date("d.m.Y H:i:s", $info->expirationDate) . '</h3>'
+						]
+					);
 				}
-			// }
+			}
+			$i++;
 		} else {
 			$info = $whois->loadDomainInfo($this->domain);
 
-			$response1 = [];
 
 			if (!$info) {
 				array_push(

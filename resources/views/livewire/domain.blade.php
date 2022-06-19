@@ -4,8 +4,8 @@
 
 		<div class="form-group{{ $errors->has('domain') ? ' has-error' : '' }}">
 
-			<label for="domain">Domain</label>
-			<textarea name="domain" wire:model='domain' type="text" class="form-control" placeholder="Domain name" ></textarea>
+			<label for="domain">Domain - пишите каждый домен на отдельной строке</label>
+			<textarea name="domain" rows="4" cols="50" wire:model='domain' type="text" class="form-control" placeholder="Domain name" ></textarea>
 
 			@if ($errors->has('domain'))
 				<span class="help-block">

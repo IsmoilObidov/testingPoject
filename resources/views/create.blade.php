@@ -28,7 +28,7 @@
 			event.detail.product_list.forEach(function(item, i, arr) {
 	
 				df = `<tr>
-						<td>${ item[0] }</td>
+					<td>${ item[0] }</td>
 					</tr>
 					`
 	
